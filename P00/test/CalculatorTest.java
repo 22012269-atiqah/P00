@@ -64,7 +64,7 @@ public class CalculatorTest {
 		}
 	
 	@Test
-	public void testDivide() {
+	public void testDivide_normal() {
 		int a = 10;
 		int b = 2;
 			
@@ -74,5 +74,16 @@ public class CalculatorTest {
 		int expected = 5;
 		assertEquals (actual, expected);
 		}
-
+	
+	@Test
+	public void testDivide_error() {
+		int a = 10;
+		int b = 0;
+			
+		Calculator cal = new Calculator();
+		int actual = cal.divide(a, b);
+			 
+		int expected = 0;
+		assertEquals (actual, expected);
+		}
 }
